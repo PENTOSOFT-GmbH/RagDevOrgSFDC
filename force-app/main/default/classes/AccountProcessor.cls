@@ -1,5 +1,4 @@
-
-/*Git Version 1.6*/
+/*Git Version 1.7*/
 public class AccountProcessor {
 @future
 public static void countContacts(Set<id> setId){
