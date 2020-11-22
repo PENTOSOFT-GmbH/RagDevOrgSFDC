@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Button_Field_values</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Test Button Field values</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/lightning/o/Account/new?defaultFieldValues=
+    Name={!URLENCODE(Account.Name)},
+    OwnerId={!Account.OwnerId},
+    AccountNumber={!Account.AccountNumber},
+    NumberOfEmployees=35000,
+    CustomCheckbox__c={!IF(Account.SomeCheckbox__c, true, false)}</url>
+</WebLink>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpportunityStage_Validation_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>Case(   StageName ,&quot;Start&quot; ,1,
+&quot;Qualifiziertes Vertriebsgespräch&quot; ,2,
+&quot;Analyse Kundensituation&quot;,3,
+&quot;Abschluss&quot;,4,
+&quot;Closed Won&quot; ,5,
+&quot;Closed Lost&quot;,6,0)  &lt; Case(    PRIORVALUE(StageName)  ,    &quot;	Start&quot; ,1,
+&quot;Qualifiziertes Vertriebsgespräch&quot; ,2,
+&quot;Analyse Kundensituation&quot;,3,
+&quot;Abschluss&quot;,4,
+&quot;Closed Won&quot; ,5,
+&quot;Closed Lost&quot;,6, 0)</errorConditionFormula>
+    <errorMessage>New opportunity should start with &quot;Start&quot; stage and Stages should be selected sequentially. Cannot skip a stage</errorMessage>
+</ValidationRule>

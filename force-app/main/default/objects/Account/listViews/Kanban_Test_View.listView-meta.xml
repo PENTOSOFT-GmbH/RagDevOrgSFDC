@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kanban_Test_View</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>Sales_Office__c</columns>
+    <columns>Total_Invoice_Amount__c</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>equals</operation>
+        <value>All</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.INDUSTRY</field>
+        <operation>equals</operation>
+        <value>Agriculture,Apparel,Banking,Biotechnology,Chemicals,Communications,Consulting,Engineering,Insurance,Manufacturing</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_COUNTRY</field>
+        <operation>equals</operation>
+        <value>WA,CA</value>
+    </filters>
+    <label>Kanban Test View</label>
+</ListView>
